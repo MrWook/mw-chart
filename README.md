@@ -1,3 +1,8 @@
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MrWook/mw-alert/blob/master/LICENSE.txt)
+[![codebeat badge](https://codebeat.co/badges/3aca7417-3502-4052-9086-d817f24df1d8)](https://codebeat.co/projects/github-com-mrwook-mw-chart-master)
+
+
+
 # mw-chart
 
 mw-chart is an AngularJS module that make [ChartJS](https://www.chartjs.org/) available inside AngularJS.
@@ -89,7 +94,7 @@ $chart was also extendet with the function `create_random_color()` to create a r
 
 ## Demo
 
-<a href='https://plnkr.co/edit/ZF3fAjkD5MRiWMViNnId?p=preview' target='_blank'>View demo on Plunker</a>
+<a href='https://plnkr.co/edit/LC6lpjwu6QNijGwZJxYF?p=preview' target='_blank'>View demo on Plunker</a>
 
 
 ## Tasklist 
