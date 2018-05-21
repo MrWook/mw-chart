@@ -43,34 +43,34 @@ And use the included 'mwChart' directive thusly:
 You can freely use the ChartJS [documentation](http://www.chartjs.org/docs/latest/) for the options attribute.
 ```javascript
 $scope.chartOptions = {
-		type:    'bar',
-		data:    {
-			datasets: [{
-				borderWidth: 1,
-				data: [
-					{"x":"2018-05-01","y":"58"},
-					{"x":"2018-06-01","y":"60"}
-				]
-			}]
-		},
-		options: {
-			scales:     {
-				xAxes: [{
-					type: 'time',
-					time: {
-						displayFormats: {
-							month: 'MM.YYYY'
-						},
-						unit: 'month'
+	type:    'bar',
+	data:    {
+		datasets: [{
+			borderWidth: 1,
+			data: [
+				{"x":"2018-05-01","y":"58"},
+				{"x":"2018-06-01","y":"60"}
+			]
+		}]
+	},
+	options: {
+		scales:     {
+			xAxes: [{
+				type: 'time',
+				time: {
+					displayFormats: {
+						month: 'MM.YYYY'
 					},
-					offset: true,
-					ticks: {
-						source: 'data',
-					}
-				}],
-			},
-		}
-	};
+					unit: 'month'
+				},
+				offset: true,
+				ticks: {
+					source: 'data',
+				}
+			}],
+		},
+	}
+};
 ```
 
 Everything beside the "data" parameter will be automaticly updated. 
