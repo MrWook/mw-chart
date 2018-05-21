@@ -98,5 +98,5 @@ $chart was also extendet with the function `create_random_color()` to create a r
 
 
 ## Tasklist 
-- [ ] add better more examples
+- [ ] add more examples
 - [ ] fix spelling, grammar mistakes
