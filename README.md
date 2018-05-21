@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MrWook/mw-alert/blob/master/LICENSE.txt)
 [![codebeat badge](https://codebeat.co/badges/3aca7417-3502-4052-9086-d817f24df1d8)](https://codebeat.co/projects/github-com-mrwook-mw-chart-master)
-
+[![Dependency Status](https://www.versioneye.com/user/projects/5b02a5790fb24f0e5baacc8c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5b02a5790fb24f0e5baacc8c)
 
 
 # mw-chart
