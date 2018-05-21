@@ -1,0 +1,97 @@
+# mw-chart
+
+mw-chart is an AngularJS module that make [ChartJS](https://www.chartjs.org/) available inside AngularJS.
+
+## Requirements (tested in)
+- Angular (v1.6.10)
+- Chart.js (v2.7.2)
+
+## Install
+
+You can install this package either with `npm` or with `bower`.
+
+### npm
+
+```shell
+npm install mw-chart --save
+```
+
+### bower
+
+```shell
+bower install mw-chart
+```
+
+## Usage
+
+Once the script is included in your html file, simply include the module in your app:
+```javascript
+angular.module('myApp', ['mw-chart']);
+```
+    
+
+And use the included 'mwChart' directive thusly:
+```html
+<mw-chart options="chartOptions"></mw-chart>
+```
+
+You can freely use the ChartJS [documentation](http://www.chartjs.org/docs/latest/) for the options attribute.
+```javascript
+$scope.chartOptions = {
+		type:    'bar',
+		data:    {
+			datasets: [{
+				borderWidth: 1,
+				data: [
+					{"x":"2018-05-01","y":"58"},
+					{"x":"2018-06-01","y":"60"}
+				]
+			}]
+		},
+		options: {
+			scales:     {
+				xAxes: [{
+					type: 'time',
+					time: {
+						displayFormats: {
+							month: 'MM.YYYY'
+						},
+						unit: 'month'
+					},
+					offset: true,
+					ticks: {
+						source: 'data',
+					}
+				}],
+			},
+		}
+	};
+```
+
+Everything beside the "data" parameter will be automaticly updated. 
+This is duo the fact that inside the "data" parameter is a reference to the canvas element inside the HTML. 
+Therefore it can't be watched by AngularJS.
+
+To Update your data you just need to trigger the update function. It will be availabe on the "chartOption" variable after the DOM is rendered.
+```javascript
+$scope.chartOptions.data_update();
+```
+
+If you want to use ChartJS without the directive or set the default values you can use the factory "$chart".
+```javascript
+angular.module('myApp').controller('MainCtrl', ['$scope', '$chart', function($scope, $chart){
+	$chart.defaults.global.legend.display = false;
+}]);
+```
+
+$chart was also extendet with the function `create_random_color()` to create a random color for you.
+
+
+## Demo
+
+<a href='https://plnkr.co/edit/ZF3fAjkD5MRiWMViNnId?p=preview' target='_blank'>View demo on Plunker</a>
+
+
+## Tasklist 
+- [ ] add better more examples
+- [ ] fix spelling, grammar mistakes

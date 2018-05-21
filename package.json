@@ -1,0 +1,36 @@
+{
+	"name":           "mw-chart",
+	"version":        "0.1.0",
+	"description":    "Lightwight AngularJS module that connects ChartJS with AngularJS",
+	"author":         "MrWook",
+	"license":        "MIT",
+	"homepage":       "https://github.com/MrWook/mw-chart",
+	"dependencies":   {
+		"angular": "^1.6.10",
+		"chart.js":"^2.7.2"
+	},
+	"devDependencies":{
+		"bower":               "^1.8.2",
+		"babel-preset-env":    "^1.6.1",
+		"babel-core":          "^6.26.0",
+		"grunt":               "^1.0.1",
+		"grunt-babel":         "^7.0.0",
+		"grunt-contrib-clean": "^1.1.0",
+		"grunt-contrib-concat":"^1.0.1",
+		"grunt-contrib-cssmin":"^2.2.1",
+		"grunt-contrib-uglify":"^3.3.0",
+		"grunt-html2js":       "^0.5.1",
+		"grunt-sass":          "^2.0.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"load-grunt-tasks":    "^4.0.0",
+		"time-grunt":          "^1.4.0"
+	},
+	"keywords":       [
+		"mw",
+		"mw-chart",
+		"angular",
+		"angular-charts",
+		"chartjs",
+		"chart"
+	]
+}

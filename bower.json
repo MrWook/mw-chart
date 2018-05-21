@@ -1,0 +1,19 @@
+{
+	"name":        "mw-chart",
+	"version":     "0.1.0",
+	"description": "Lightwight AngularJS module that connects ChartJS with AngularJS",
+	"author":      "MrWook",
+	"license":     "MIT",
+	"homepage":    "https://github.com/MrWook/mw-chart",
+	"dependencies":{
+		"angular": "^1.6.10",
+		"chart.js":"^2.7.2"
+	},
+	"ignore":      [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

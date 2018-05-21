@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+		 <script src="../dist/js/mw-chart.js"></script>
+		<script src="controller.js"></script>
+	</head>
+	<body id="content" ng-app="app">
+		<div ng-controller="MainCtrl" style="max-width:800px">
+			<label>
+				Chart Type:
+				<select name="type" ng-model="chartOptions.type">
+					<option value="bar">Bar</option>
+					<option value="line">line</option>
+					<option value="radar">radar</option>
+					<option value="pie">pie</option>
+					<option value="doughnut">doughnut</option>
+					<option value="polarArea">polarArea</option>
+					<option value="bubble">bubble</option>
+					<option value="scatter">scatter</option>
+				</select>
+			</label>
+			<button ng-click="add()">Add data</button>
+			<mw-chart options="chartOptions"></mw-chart>
+		</div>
+
+	</body>
+</html>
