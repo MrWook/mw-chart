@@ -1,11 +1,10 @@
 /**
- * @version v0.1.0
- * @link https://github.com/MrWook/mw-chart
- * @license MIT
- * Copyright (c) 2018 MrWook
- */
-'use strict';
-(function(ng, undefined){
+* @version v0.1.0
+* @link https://github.com/MrWook/mw-chart
+* @license MIT
+* Copyright (c) 2018 MrWook
+*/(function(angular, undefined){
+ 'use strict';
 angular.module('mw-chart', []);
 angular.module('mw-chart').directive('mwChart', ['$chart', function ($chart) {
 	return {
@@ -66,5 +65,5 @@ angular.module('mw-chart').factory('$chart', ['$log', function ($log) {
 	}
 }]);
 
-})();
+})(angular);
 //# sourceMappingURL=mw-chart.js.map

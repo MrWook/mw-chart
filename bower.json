@@ -6,7 +6,7 @@
 	"license":     "MIT",
 	"homepage":    "https://github.com/MrWook/mw-chart",
 	"dependencies":{
-		"angular": "^1.6.10",
+		"angular": "^1.7.2",
 		"chart.js":"^2.7.2"
 	},
 	"ignore":      [

@@ -1,12 +1,17 @@
 'use strict';
 module.exports = function(grunt){
-	let copyright = '/**\n'+
-					' * @version v<%= pkg.version %>\n'+
-					' * @link <%= pkg.homepage %>\n'+
-					' * @license <%= pkg.license %>\n'+
-					' * Copyright (c) '+(new Date()).getFullYear()+' <%= pkg.author %>\n'+
-					' */\n\r';
-	let name      = '<%= pkg.name %>';
+	let name = '<%= pkg.name %>';
+
+	let copyright = `/**
+* @version v<%= pkg.version %>
+* @link <%= pkg.homepage %>
+* @license <%= pkg.license %>
+* Copyright (c) ${(new Date()).getFullYear()} <%= pkg.author %>
+*/\r`;
+
+	let prefix = '(function(angular, undefined){\n \'use strict\';\n';
+	let suffix = '\n})(angular);';
+
 	// Load all grunt tasks automatically
 	require('load-grunt-tasks')(grunt);
 
@@ -15,21 +20,24 @@ module.exports = function(grunt){
 
 	//Configure grunt
 	grunt.initConfig({
-						 pkg:    grunt.file.readJSON('package.json'),
-						 babel:  require('./grunt/babel')(),
-						 clean:  require('./grunt/clean')(),
-						 concat: require('./grunt/concat')(copyright, name),
-						 uglify: require('./grunt/uglify')(name),
-						 watch: require('./grunt/watch')()
+						 pkg:        grunt.file.readJSON('package.json'),
+						 babel:      require('./grunt/babel')(),
+						 clean:      require('./grunt/clean')(),
+						 concat:     require('./grunt/concat')(copyright, name, prefix, suffix),
+						 cssmin:     require('./grunt/cssmin')(copyright, name),
+						 html2js:    require('./grunt/html2js')(name),
+						 minifyHtml: require('./grunt/minifyHtml')(),
+						 sass:       require('./grunt/sass')(),
+						 uglify:     require('./grunt/uglify')(copyright, name)
 					 });
-
 
 	// Build distribution files
 	grunt.registerTask('default', [
+		'minifyHtml',
+		'html2js',
 		'babel',
+		'concat:modules',
 		'uglify',
-		'concat',
-		'clean',
-		'watch'
+		'clean'
 	]);
 };

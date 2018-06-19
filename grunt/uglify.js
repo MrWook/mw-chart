@@ -1,19 +1,18 @@
-module.exports = function(name) {
+module.exports = function(copyright, name){
 	return {
 		build: {
 			options: {
-				sourceMap: true,
+				banner:      copyright,
+				sourceMap:   true,
+				sourceMapIn: 'dist/js/'+name+'.js.map',
+				sourceMapPrefix: 2,
 			},
-			files:[
+			files:   [
 				{
-					src:  [
-						'src/'+name+'.js',
-						'tmp/modules/**/*.js',
-						'tmp/templates.js',
-					],
-					dest: 'tmp/'+name+'.min.js'
+					src:  ['dist/js/'+name+'.js'],
+					dest: 'dist/js/'+name+'.min.js'
 				}
 			]
 		}
-	}
+	};
 };

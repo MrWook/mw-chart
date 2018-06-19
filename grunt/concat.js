@@ -1,32 +1,27 @@
-module.exports = function(copyright, name){
+module.exports = function(copyright, name, prefix, suffix){
 	return {
 		options: {
 			sourceMap: true,
-			banner:    copyright,
+			banner:    copyright
 		},
 		modules: {
 			options: {
-				banner:    copyright+"'use strict';\n",
-				process: function(src, filepath) {
+				banner:  copyright+prefix,
+				footer:  suffix,
+				process: function(src){
 					return src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
-				},
+				}
 			},
-			src:  [
-				'src/extra/.prefix',
+			src:     [
 				'src/'+name+'.js',
 				'tmp/modules/**/*.js',
-				'tmp/templates.js',
-				'src/extra/.suffix'
+				'tmp/templates.js'
 			],
-			dest: 'dist/js/'+name+'.js'
+			dest:    'dist/js/'+name+'.js'
 		},
-		modules_min: {
-			src:  [
-				'src/extra/.prefix',
-				'tmp/'+name+'.min.js',
-				'src/extra/.suffix'
-			],
-			dest: 'dist/js/'+name+'.min.js'
+		css:     {
+			src:  ['tmp/css/**/*.css'],
+			dest: 'dist/css/'+name+'.css'
 		}
 	};
 };

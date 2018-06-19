@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MrWook/mw-alert/blob/master/LICENSE.txt)
 [![codebeat badge](https://codebeat.co/badges/3aca7417-3502-4052-9086-d817f24df1d8)](https://codebeat.co/projects/github-com-mrwook-mw-chart-master)
-[![Dependency Status](https://www.versioneye.com/user/projects/5b02a5790fb24f0e5baacc8c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5b02a5790fb24f0e5baacc8c)
+[![dependencies Status](https://david-dm.org/MrWook/mw-chart/status.svg)](https://david-dm.org/MrWook/mw-chart)
 [![npm version](https://badge.fury.io/js/mw-chart.svg)](https://badge.fury.io/js/mw-chart)
 
 # mw-chart
@@ -8,7 +8,7 @@
 mw-chart is an AngularJS module that make [ChartJS](https://www.chartjs.org/) available inside AngularJS.
 
 ## Requirements (tested in)
-- Angular (v1.6.10)
+- Angular (v1.7.2)
 - Chart.js (v2.7.2)
 
 ## Install
@@ -100,4 +100,3 @@ $chart was also extendet with the function `create_random_color()` to create a r
 ## Tasklist 
 - [ ] add more examples
 - [ ] fix spelling, grammar mistakes
-- [ ] add badges
