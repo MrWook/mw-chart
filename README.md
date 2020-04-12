@@ -3,6 +3,7 @@
 [![dependencies Status](https://david-dm.org/MrWook/mw-chart/status.svg)](https://david-dm.org/MrWook/mw-chart)
 [![npm version](https://badge.fury.io/js/mw-chart.svg)](https://badge.fury.io/js/mw-chart)
 
+# This repository is no longer maintained.
 # mw-chart
 
 mw-chart is an AngularJS module that make [ChartJS](https://www.chartjs.org/) available inside AngularJS.
